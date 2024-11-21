@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Strike&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Fredoka;
+    scroll-behavior: smooth;
+}
+body{
+    
+}
+.nav{
+    position: fixed;
+    width: 100%;
+    height: 3em;
+    background-color: transparent;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 10;
+}
+.nav h1{
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    margin-inline: 3em;
+}
+.navtext {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.navtext::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+.navtext:hover::after {
+    width: 100%;
+}
+.hero{
+    height: 100vh;
+}
+.hero h1{
+    position: absolute;
+    top: 8em;
+    left: 2em;
+    color: white;
+    font-size: 48px;
+    text-shadow: 0 0 5px black;
+    z-index: 6;
+}
+.gradient{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    background-image: linear-gradient(to top, black, transparent);
+    z-index: 5;
+}
+.dionela-background{
+    width: 100%;
+    height: 100vh;
+}
+.dionela{
+    width: 50% !important;
+    height: 90vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+.fade{
+    opacity: 0;
+    transform: translateY(50%);
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.space{
+    height: 50vh;
+    background-color: black;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+.main h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 200;
+}
+.sect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 800px;
+    font-size: 20px;
+    margin-block: 2em;
+}
+.sect img{
+    height: 400px;
+    width: 400px;
+}
+.l img{
+    margin-left: 2em;
+}
+.r img{
+    margin-right: 2em;
+}
+
+.sining{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sining img{
+    height: 200px;
+    width: 200px;
+}
+.spot{
+    display: flex;
+    align-items: center;
+    background-color: #1DB954;
+    border-radius: 20px;
+    margin-left: 5em;
+    cursor: pointer;
+}
+.spot .text{
+    margin: 1em;
+}
+.spot i{
+    margin-inline: 2em;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.mel{
+    margin-bottom: 5em;
+    color: rgba(255, 255, 255, 0.2);
+    border-top: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+
+.log-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -200%;
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    transition: 0.6s;
+    color: white;
+}
+.log-in-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 540px;
+    background-color: var(--prim);
+    border-radius: 10px;
+}
+.log-in-form h1{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+}
+.log-in-form input{
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 1em;
+    outline: 2px solid #000;
+    transition: 0.3s;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+}
+.log-in-form input:hover{
+    outline: 2px solid var(--sec);
+}
+.log-in-form input:focus{
+    outline: 2px solid var(--sec);
+}
+#submit{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+#submit:hover{
+    background-color: var(--sec);
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .hero h1{
+        font-size: 36px;
+        left: 1em;
+    }
+}
