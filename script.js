@@ -3,6 +3,7 @@ const title = document.querySelector('.title');
 const hero = document.querySelector('.hero');
 const mainfade = document.querySelectorAll('.mainfade'); 
 const body = document.querySelector('.body');
+const song = document.querySelector('.song');
 
 let user = document.getElementById("user");
 let pass = document.getElementById("pass");
@@ -13,6 +14,7 @@ let logIn = 0;
 isLogIn();
 
 window.addEventListener('scroll', () => {
+    song.play();
     if(logIn!=1){
         container.style.filter = "blur(20px)";
         logContainer.style.transform = "translateY(75%)";
