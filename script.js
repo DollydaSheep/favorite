@@ -17,7 +17,8 @@ window.addEventListener('scroll', () => {
     song.play();
     if(logIn!=1){
         container.style.filter = "blur(20px)";
-        logContainer.style.transform = "translateY(75%)";
+        //logContainer.style.transform = "translateY(75%)";
+        logContainer.style.zIndex = 20;
         body.style.overflowY = "hidden";
     }
     let scroll = window.pageYOffset;
@@ -32,7 +33,8 @@ window.addEventListener('scroll', () => {
 
 function login(){
     container.style.filter = "blur(20px)";
-    logContainer.style.transform = "translateY(75%)";
+    //logContainer.style.transform = "translateY(75%)";
+    logContainer.style.zIndex = 20;
     body.style.overflowY = "hidden";
 }
 
